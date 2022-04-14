@@ -17,7 +17,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         double number1, number2;
         do {
-            System.out.println("Enter 1 to find Square root of number");
+            System.out.println("Enter 1 to find Square root of a number");
             System.out.println("Enter 2 to find Factorial of a number");
             System.out.println("Enter 3 to find Natural logarithm of a number");
             System.out.println("Enter 4 to find Power of Number");
@@ -34,7 +34,7 @@ public class Calculator {
                     // do factorial
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Factorial of "+number1+" is : " + calculator.factoral(number1));
+                    System.out.println("Factorial of "+number1+" is : " + calculator.factorial(number1));
                     System.out.println("\n");
 
                     break;
@@ -42,7 +42,7 @@ public class Calculator {
                     // find square root
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Square root of "+number1+" is : " + calculator.sqroot(number1));
+                    System.out.println("Square root of "+number1+" is : " + calculator.squreroot(number1));
                     System.out.println("\n");
 
 
@@ -53,14 +53,14 @@ public class Calculator {
                     number1 = scanner.nextDouble();
                     System.out.print("Enter the second number : ");
                     number2 = scanner.nextDouble();
-                    System.out.println(number1+ " raised to power "+number2+" is : " + calculator.power(number1, number2));
+                    System.out.println(number1+ " raised to power "+number2+" is : " + calculator.powerfunction(number1, number2));
                     System.out.println("\n");
                     break;
                 case 4:
                     // find natural log
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Natural log of "+number1+" is : " + calculator.naturalLog(number1));
+                    System.out.println("Natural log of "+number1+" is : " + calculator.naturalLogarithm(number1));
                     System.out.println("\n");
 
                     break;
@@ -72,32 +72,32 @@ public class Calculator {
     }
 
 
-    public double factoral(double number1) {
-        logger.info("[FACTORIAL] - " + number1);
+    public double factorial(double number1) {
+        logger.info("[fact] - " + number1);
         double result = fact(number1);
-        logger.info("[RESULT - FACTORIAL] - " + result);
+        logger.info("[result - fact] - " + result);
         return result;
     }
 
 
 
-    public double sqroot(double number1) {
-        logger.info("[SQ ROOT] - " + number1);
+    public double squreroot(double number1) {
+        logger.info("[squre root] - " + number1);
         double result = Math.sqrt(number1);
-        logger.info("[RESULT - SQ ROOT] - " + result);
+        logger.info("[result - squre root] - " + result);
         return result;
     }
 
 
-    public double power(double number1, double number2) {
-        logger.info("[POWER - " + number1 + " RAISED TO] " + number2);
+    public double powerfunction(double number1, double number2) {
+        logger.info("[power - " + number1 + " raised to] " + number2);
         double result = Math.pow(number1,number2);
-        logger.info("[RESULT - POWER] - " + result);
+        logger.info("[result - power] - " + result);
         return result;
     }
 
-    public double naturalLog(double number1) {
-        logger.info("[NATURAL LOG] - " + number1);
+    public double naturalLogarithm(double number1) {
+        logger.info("[natural logarithm] - " + number1);
         double result = 0;
         try {
 
@@ -109,9 +109,9 @@ public class Calculator {
                 result = Math.log(number1);
             }
         } catch (ArithmeticException error) {
-            System.out.println("[EXCEPTION - LOG] - Cannot find log of negative numbers " + error.getLocalizedMessage());
+            System.out.println("[EXCEPTION - LOG] - Finding log of negative numbers is invalid" + error.getLocalizedMessage());
         }
-        logger.info("[RESULT - NATURAL LOG] - " + result);
+        logger.info("[result - natural logarithm] - " + result);
         return result;
     }
     public double fact(double num) {
