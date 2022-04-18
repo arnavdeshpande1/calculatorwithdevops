@@ -1,3 +1,3 @@
-# calculatorwithdevops
+# calculatorwithdevop
 
-Simple Scientific Calculator using DevOps 
+Scientific Calculator using DevOps 
